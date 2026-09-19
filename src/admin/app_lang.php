@@ -217,6 +217,9 @@ $lang['admin_modules_enable_all_success'] = 'Todos os módulos foram ativados co
 $lang['admin_modules_enable_confirm'] = 'Tem certeza de que deseja ativar o módulo: <b>%s</b>?';
 $lang['admin_modules_enable_error'] = 'Não foi possível ativar o módulo.';
 $lang['admin_modules_enable_success'] = 'Módulo ativado com sucesso.';
+$lang['admin_modules_install_confirm'] = 'Tem certeza de que deseja instalar este módulo?';
+$lang['admin_modules_install_error'] = 'Falha ao instalar o módulo.';
+$lang['admin_modules_install_success'] = 'Módulo instalado com sucesso.';
 $lang['admin_modules_install_tip'] = 'Módulos adicionam novos recursos e funcionalidades ao seu site. Explore os módulos disponíveis no <a href="%s" target="_blank" rel="noopener">diretório de módulos</a> ou envie um pacote <b>.zip</b>.';
 
 /**
@@ -242,6 +245,9 @@ $lang['admin_plugins_enable_all_success'] = 'Todos os plugins foram ativados com
 $lang['admin_plugins_enable_confirm'] = 'Tem certeza de que deseja ativar o plugin: <b>%s</b>?';
 $lang['admin_plugins_enable_error'] = 'Não foi possível ativar o plugin.';
 $lang['admin_plugins_enable_success'] = 'Plugin ativado com sucesso.';
+$lang['admin_plugins_install_confirm'] = 'Tem certeza de que deseja instalar este plugin?';
+$lang['admin_plugins_install_error'] = 'Falha ao instalar o plugin.';
+$lang['admin_plugins_install_success'] = 'Plugin instalado com sucesso.';
 $lang['admin_plugins_install_tip'] = 'Plugins estendem recursos existentes com opções extras ou integrações. Instale a partir do <a href="%s" target="_blank" rel="noopener">diretório de plugins</a> ou envie um arquivo <b>.zip</b>.';
 
 /**
@@ -261,6 +267,9 @@ $lang['admin_themes_disable_success'] = 'Tema desativado com sucesso.';
 $lang['admin_themes_enable_confirm'] = 'Tem certeza de que deseja ativar o tema: <b>%s</b>?';
 $lang['admin_themes_enable_error'] = 'Não foi possível ativar o tema.';
 $lang['admin_themes_enable_success'] = 'Tema ativado com sucesso.';
+$lang['admin_themes_install_confirm'] = 'Tem certeza de que deseja instalar este tema?';
+$lang['admin_themes_install_error'] = 'Falha ao instalar o tema.';
+$lang['admin_themes_install_success'] = 'Tema instalado com sucesso.';
 $lang['admin_themes_install_tip'] = 'Temas alteram a aparência e o layout do seu site. Escolha na <a href="%s" target="_blank" rel="noopener">biblioteca de temas</a> ou envie um arquivo <b>.zip</b> para instalar o seu.';
 $lang['admin_themes_none_tip'] = 'Este aplicativo está sendo executado sem um tema. Instale um para personalizar a interface pública.';
 
@@ -306,12 +315,65 @@ $lang['admin_languages_enable_confirm'] = 'Tem certeza de que deseja ativar o id
 $lang['admin_languages_enable_error'] = 'Não foi possível ativar o idioma.';
 $lang['admin_languages_enable_error_nochange'] = 'Este idioma já está ativado.';
 $lang['admin_languages_enable_success'] = 'Idioma ativado com sucesso.';
+$lang['admin_languages_install_confirm'] = 'Tem certeza de que deseja instalar este idioma?';
+$lang['admin_languages_install_error'] = 'Falha ao instalar o idioma.';
+$lang['admin_languages_install_success'] = 'Idioma instalado com sucesso.';
 $lang['admin_languages_install_tip'] = 'Os idiomas adicionam traduções para a interface e o conteúdo do seu site. Consulte os idiomas disponíveis no <a href="%s" target="_blank" rel="noopener">diretório de idiomas</a> ou envie um pacote <b>.zip</b> para instalar o seu próprio.';
 $lang['admin_languages_tip'] = 'Ative, desative e defina o idioma padrão do site. Idiomas ativados estão disponíveis para visitantes do site.';
 
 /**
  * ---------------------------------------------------------------
- * Updates & License Section
+ * Package Driver & Installation Messages
+ * ---------------------------------------------------------------
+ * Language lines for package installation, download, backup, and validation.
+ */
+$lang['package_already_exists'] = 'O pacote já existe.';
+$lang['package_archive_download_failed'] = 'Falha ao baixar o arquivo do pacote.';
+$lang['package_backup_create_error'] = 'Falha ao criar o backup do pacote.';
+$lang['package_backup_dir_failed'] = 'Falha ao criar o diretório de backup %s';
+$lang['package_backup_missing'] = 'O arquivo de backup não existe.';
+$lang['package_backup_path_error'] = 'O caminho do arquivo de backup não pôde ser resolvido.';
+$lang['package_backup_request_invalid'] = 'Solicitação de backup inválida.';
+$lang['package_backup_restore_error'] = 'Falha ao restaurar o backup do pacote.';
+$lang['package_catalog_type_unknown'] = 'Tipo de catálogo desconhecido.';
+$lang['package_checksum_error'] = 'A verificação de integridade (checksum) do pacote falhou.';
+$lang['package_copy_files_error'] = 'Falha ao copiar os arquivos do pacote para o destino.';
+$lang['package_copy_updates_error'] = 'Falha ao copiar os arquivos de atualização para o destino.';
+$lang['package_dest_dir_failed'] = 'Falha ao criar o diretório de destino %s';
+$lang['package_destination_error'] = 'O destino do pacote não pôde ser resolvido.';
+$lang['package_download_dir_failed'] = 'Falha ao criar o diretório de download %s';
+$lang['package_download_empty'] = 'O download do pacote retornou uma resposta vazia.';
+$lang['package_download_request_invalid'] = 'Solicitação de download do pacote inválida.';
+$lang['package_extract_failed'] = 'Falha ao extrair o ZIP %s';
+$lang['package_invalid_lang_files'] = 'Idioma inválido — arquivos de idioma obrigatórios do aplicativo ausentes.';
+$lang['package_invalid_lang_structure'] = 'Idioma inválido — diretórios admin e/ou ci3 ausentes.';
+$lang['package_invalid_missing_info'] = '%s inválido: "info.php" ausente.';
+$lang['package_invalid_module_structure'] = 'Módulo inválido — diretórios config e/ou controllers obrigatórios ausentes.';
+$lang['package_invalid_plugin_boot'] = 'Plugin inválido — arquivo "boot.php" ausente.';
+$lang['package_invalid_plugin_contents'] = 'Plugin inválido — plugins não podem conter controllers ou views.';
+$lang['package_invalid_theme_boot'] = 'Tema inválido — arquivo "boot.php" ausente.';
+$lang['package_invalid_theme_views'] = 'Tema inválido — diretório views ausente.';
+$lang['package_no_root_dir'] = 'O pacote não contém um diretório raiz.';
+$lang['package_not_downloadable'] = 'O pacote não está disponível para download público.';
+$lang['package_not_in_registry'] = 'O pacote não está disponível no registro público.';
+$lang['package_request_invalid'] = 'Solicitação de pacote inválida.';
+$lang['package_rollback_request_invalid'] = 'Solicitação de reversão inválida.';
+$lang['package_root_mismatch'] = 'A raiz do arquivo do pacote não corresponde a %s';
+$lang['package_single_root_required'] = 'O pacote deve conter exatamente um diretório raiz.';
+$lang['package_source_error'] = 'A origem do pacote não pôde ser resolvida.';
+$lang['package_system_core_restricted'] = 'Componentes do sistema não podem ser instalados como pacotes.';
+$lang['package_temp_dir_failed'] = 'Falha ao criar o diretório temporário %s';
+$lang['package_type_unknown'] = 'Tipo de pacote desconhecido.';
+$lang['package_update_request_invalid'] = 'Solicitação de atualização de pacote inválida.';
+$lang['package_update_root_mismatch'] = 'A raiz do arquivo de atualização não corresponde a %s.';
+$lang['package_upload_dir_failed'] = 'Falha ao criar o diretório de upload %s';
+$lang['package_url_invalid'] = 'URL de distribuição do pacote inválida.';
+$lang['package_write_failed'] = 'Falha ao gravar o pacote em %s';
+$lang['package_zip_not_found'] = 'O arquivo ZIP do pacote não existe: %s';
+
+/**
+ * ---------------------------------------------------------------
+ * Updates Section
  * ---------------------------------------------------------------
  * Language lines for updates section.
  */
